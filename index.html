@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/8a8a5c78c3.js" crossorigin="anonymous"></script>
   <link rel="icon" href="./assets/Group (1).png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +31,7 @@
 
     .bg-transparent {
       background-image: url("/assets/bg-tans.jpeg");
-      background-size:cover;
+      background-size: cover;
       position: relative;
       isolation: isolate;
     }
@@ -43,6 +44,26 @@
       background: rgb(255, 255, 255);
       opacity: 0.8;
     }
+
+  .animation{
+    user-select: none;
+    color: white;
+    background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0,255,0) 14.28%,
+              rgb(0,255,255) 21.4%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+    background-size: 600vw 600vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: slide 10s linear infinite forwards;
+}
+@keyframes slide {
+  0%{
+    background-position-x: 0%;
+  }
+  100%{
+    background-position-x: 600vw;
+  }
+}
+
   </style>
   <script>
     tailwind.config = {
@@ -63,10 +84,11 @@
       }
     }
   </script>
-
+  <title>Nature's Platter</title>
 </head>
 
 <body class="mx-auto">
+  <!-- hero and nav section  -->
   <header class="bg-gradient-to-b from-white to-pr-skin mb-12 md:mb-36">
     <!-- nav section -->
     <nav class="mt-0 md:mt-6 border-[0.5px] border-pr-green px-4 py-2 mb-12 flex justify-between items-center
@@ -134,7 +156,11 @@
         <div class>
           <h1 class="w-11/12 mx-auto text-3xl font-semibold text-center md:text-5xl">Freshness <span
               class="text-pr-green">You Can <br>
-              Count</span> On, Prices You’ll Love!</h1>
+              Count</span> On,
+            <span class="animation">
+              Prices You’ll Love!
+            </span>
+          </h1>
           <p
             class="w-11/12  py-4 text-center text-black opacity-70 md:opacity-80 md:text-lg md:max-w-3xl mx-auto md:py-8">
             Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered
@@ -155,7 +181,7 @@
       <div class="flex flex-col gap-5 md:flex-row ">
         <!-- card -->
         <div
-          class="bg-pr-skin flex flex-col items-center justify-between px-6 rounded-xl md:flex-1 hover:scale-105 hover:opacity-90 hover:shadow-md ">
+          class="bg-pr-skin flex flex-col items-center justify-between px-6 rounded-xl md:flex-1 hover:scale-105 hover:opacity-90 hover:shadow-md transition duration-200">
           <div class="mb-5 mt-6">
             <img class="bg-white rounded-full p-3" src="assets/service.png" alt="24/7">
           </div>
@@ -166,7 +192,7 @@
         </div>
 
         <div class="bg-pr-skin flex flex-col items-center justify-between px-6 rounded-xl md:flex-1
-        hover:scale-105 hover:opacity-90 hover:shadow-md">
+        hover:scale-105 hover:opacity-90 hover:shadow-md transition duration-200">
           <div class="mb-5 mt-6 ">
             <img class="bg-white rounded-full p-3" src="assets/delivery.png" alt="24/7">
           </div>
@@ -177,7 +203,7 @@
         </div>
 
         <div class="bg-pr-skin flex flex-col items-center justify-between px-6 rounded-xl md:flex-1
-        hover:scale-105 hover:opacity-90 hover:shadow-md">
+        hover:scale-105 hover:opacity-90 hover:shadow-md transition duration-200">
           <div class="mb-5 mt-6">
             <img class="bg-white rounded-full p-3" src="assets/healthy.png" alt="24/7">
           </div>
@@ -186,11 +212,6 @@
             well-being 24/7.
           </p>
         </div>
-
-
-
-
-      </div>
 
     </section>
     <!-- popular section -->
@@ -378,7 +399,7 @@
       <div class="flex flex-col gap-4 md:flex-row">
         <!-- rice-1 -->
         <div class=" overflow-x-hidden flex  justify-between rounded-xl pl-4 pt-6 pb-5 flex-1 md:flex-auto
-        md:items-center md:pl-10" style="background-color: #115414;">
+        md:items-center md:pl-10 md:w-3/5" style="background-color: #115414;">
           <div class=" flex-1">
             <img class="mb-4 -ml-4 md:mb-8" src="assets/dawat-logo.png" alt="Dawat rice">
             <button class="font-light poppins text-xs px-3 py-1.5 text-white rounded-md mb-3
@@ -416,44 +437,94 @@
     </section>
 
     <!-- location section -->
-     <section class="bg-transparent mb-96">
+    <section class="bg-transparent mb-12 md:mb-40">
       <div class="w-11/12 md:max-w-xxl mx-auto">
         <h1 class="text-2xl text-pr-green md:mb-32 mb-8 md:text-4xl font-semibold">Currently Available in</h1>
-        <div class="grid grid-cols-2  md:flex gap-4 justify-center w-3/4 mx-auto mb-4">
-          <div class="text-base bg-pr-green md:py-7 md:px-28 rounded-xl text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold md:flex-1 ">Dhaka</div>
-          <div class="text-base bg-pr-green md:py-7 md:px-28 rounded-xl text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold md:flex-1">Rajshahi</div>
-          <div class="text-base bg-pr-green md:py-7 md:px-28 rounded-xl text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold md:flex-1">Chittagong</div>
-          <div class="text-base  md:hidden block bg-pr-green md:py-7 md:px-28 rounded-xl text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold md:flex-1 ">Sylhet</div>
+        <div class="grid  grid-cols-2  md:grid-cols-3 gap-4 justify-center w-3/4 mx-auto mb-4 ">
+          <div
+            class="text-base bg-pr-green rounded-xl py-2 md:py-4 text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold ">
+            Dhaka</div>
+          <div
+            class="text-base bg-pr-green rounded-xl py-2 md:py-4 text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold ">
+            Rajshahi</div>
+          <div
+            class="text-base bg-pr-green rounded-xl py-2 md:py-4 text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold ">
+            Chittagong</div>
+          <div
+            class="text-base  md:hidden block bg-pr-green py-2 md:py-7 rounded-xl text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold  ">
+            Sylhet</div>
         </div>
-        <div class="grid grid-cols-2 gap-4 md:flex md:gap-4 md:justify-center w-3/4 mx-auto pb-32">
-          <div class="text-base hidden md:block bg-pr-green md:py-7 md:px-24 rounded-xl text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold md:flex-1">Sylhet</div>
-          <div class="text-base bg-pr-green md:py-7 md:px-24 rounded-xl text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold md:flex-1">Comilla</div>
-          <div class="text-base bg-pr-green md:py-7 md:px-24 rounded-xl text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold md:flex-1">Rangpur</div>
-          <div class="text-base bg-pr-green md:py-7 md:px-24 rounded-xl text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold md:flex-1 ">Chandpur
+        <div
+          class="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-4 md:justify-center w-3/4 md:max-w-xxl mx-auto pb-32 flex-wrap">
+          <div
+            class="text-base hidden md:block bg-pr-green md:py-4 rounded-xl text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold ">
+            Sylhet</div>
+          <div
+            class="text-base bg-pr-green md:py-4 py-2 rounded-xl text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold ">
+            Comilla</div>
+          <div
+            class="text-base bg-pr-green md:py-4 py-2 rounded-xl text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold ">
+            Rangpur</div>
+          <div
+            class="text-base bg-pr-green md:py-4 py-2 rounded-xl text-white text-center shadow-2xl md:mb-7 md:text-3xl md:font-bold  ">
+            Chandpur
           </div>
         </div>
-      </div>  
-    </div>
+      </div>
+      </div>
     </section>
 
-   <!-- news sections -->
-    <section class="bg-pr-skin w-11/12 mx-auto md:max-w-xxl rounded-2xl py-9 px-7 md:flex md:flex-row
-    md:gap-32 md:py-14 md:px-24">
-      <div class="flex justify-center">
+    <!-- news sections -->
+    <section class="relative bg-pr-skin w-11/12 mx-auto md:max-w-xxl rounded-2xl py-9 px-7 md:flex md:flex-row
+    md:justify-between md:py-14 md:px-24 -mb-56">
+      <div class="flex justify-center mb-6 md:mb-auto">
         <img class="w-2/4 md:w-full" src="assets/vegetable-busket.png" alt="">
       </div>
-      <div class="flex flex-col justify-center">
-        <h2 class="text-center text-xl text-pr-green font-bold mb-3 md:text-black md:text-4xl md:mb-6">Get Grocery News!</h2>
-        <p class="text-center mb-[20px] text-base md:text-xl md:mb-10">Exclusive training tips, ticks, product deals and more.</p>
-        <input class="placeholder:opacity-50 p-2 rounded-md mb-3 md:p-5" placeholder="Enter email...." type="email" name="" id="">
+      <div class="flex flex-col justify-center md:items-start">
+        <h2 class="text-center md:text-start text-xl text-pr-green font-bold mb-3 md:text-black md:text-4xl md:mb-6">Get
+          Grocery News!</h2>
+        <p class="text-center md:text-start mb-[20px] text-base md:text-xl md:mb-10">Exclusive training tips, ticks,
+          product deals and more.</p>
+        <input class="md:w-4/5 placeholder:opacity-50 px-2 py-3 rounded-md mb-3 md:p-5 md:mb-9"
+          placeholder="Enter email...." type="email" name="" id="">
         <div class="flex justify-center">
-          <button class="bg-pr-green px-6 py-1 text-white rounded-lg text-sm hover:bg-green-300 hover:text-black border-2 border-pr-green transition duration-500 ease-in-out">
+          <button class="bg-pr-green px-6 py-1 text-white rounded-lg text-sm hover:bg-green-300 hover:text-black border-2 border-pr-green transition duration-500 ease-in-out
+          md:px-8 md:py-3 md:text-xl">
             Subscribe
           </button>
         </div>
       </div>
     </section>
   </main>
+
+  <footer class="bg-pr-green">
+    <div class="w-11/12 md:max-w-xxl mx-auto pt-72 flex flex-col gap-9 pb-12 md:pb-36 md:grid md:grid-cols-3
+     md:items-end center md:gap-0 justify-items-end">
+      <div class="">
+        <img src="assets/logo-footer.png" alt="logo">
+        <p class="mt-3 opacity-70 text-white md:text-xl">
+          Discover a world of treats, toys, and essentials handpicked for your furry friends
+        </p>
+      </div>
+      <div>
+        <ul class="flex flex-col gap-5">
+          <li><a class="text-base md:text-xl text-white" href="">Product</a></li>
+          <li><a class="text-base md:text-xl text-white" href="">Services</a></li>
+          <li><a class="text-base md:text-xl text-white" href="">Contact us</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-sm md:text-base text-white mb-1">Follow us</p>
+        <div class="flex flex-row gap-5">
+          <a href=""><i class="text-white fa-brands fa-facebook"></i></a>
+          <a href=""><i class="text-white fa-brands fa-instagram"></i></a>
+          <a href=""><i class="text-white fa-brands fa-linkedin"></i></a>
+          <a href=""><i class="text-white fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
 </body>
 
 </html>
